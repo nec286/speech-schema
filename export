@@ -1,0 +1,4 @@
+#!/bin/zsh
+
+cqlsh -e "desc keyspace speech" > speech_schema.cql
+

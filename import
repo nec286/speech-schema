@@ -1,0 +1,13 @@
+#!/bin/zsh
+
+printf '%s ' 'Are you sure? (y/N)'
+read prompt
+case $prompt in
+  [yY][eE][sS]|[yY])
+    cqlsh -e "drop keyspace speech ; source 'speech_schema.cql'"
+    ;;
+  *)
+    echo "Bye"
+    ;;
+esac
+
